@@ -7,7 +7,7 @@
   tasks:
   - name: Generate RPM list
     yum:
-      list
+      list: *
     register: pkg_list
 
   - name: Report RPM list
