@@ -2,6 +2,7 @@
 - name: Gather IOS facts from Cisco Router
   hosts: cisco
   become: false
+  gather_facts: false
 
   tasks:
   - name: Gather IOS facts
