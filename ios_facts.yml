@@ -10,4 +10,4 @@
 
   - name: Report facts
     debug:
-      vars: ios_facts_gathered
+      var: ios_facts_gathered
