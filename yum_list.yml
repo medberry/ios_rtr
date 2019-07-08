@@ -1,0 +1,15 @@
+---
+- name: List packages and report
+  hosts: all
+  gather_facts: yes
+  become: yes
+
+  tasks:
+  - name: Generate RPM list
+    yum:
+      list
+    register: pkg_list
+
+  - name: Report RPM list
+    debug:
+      var: pkg_list
