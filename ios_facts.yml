@@ -1,0 +1,13 @@
+---
+- name: Gather IOS facts from Cisco Router
+  hosts: cisco
+  become: false
+
+  tasks:
+  - name: Gather IOS facts
+    ios_facts:
+    register: ios_facts_gathered
+
+  - name: Report facts
+    debug:
+      vars: ios_facts_gathered
