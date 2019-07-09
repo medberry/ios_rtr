@@ -12,5 +12,5 @@
 
   - name: Report RPM list
     debug:
-      msg: "{{ item }}"
+      vars: "{{ item }}"
     with_items: pkg_list.results
