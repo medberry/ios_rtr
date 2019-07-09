@@ -19,4 +19,4 @@
 
   - name: Jinja Ninja
     debug:
-      msg: "{% for pkg in pkg_list.results %} pkg.name {% endfor %}"
+      msg: "{% for pkg in pkg_list.results %} {{pkg.name}} {% endfor %}"
