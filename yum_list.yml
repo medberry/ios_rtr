@@ -15,4 +15,4 @@
       var:  item
     with_items: "{{pkg_list|json_query(jsonquery)}}"
     vars:
-      jsonquery: "results[?name!='ttt'].version"
+      jsonquery: "results[?name!='ttt'].name"
