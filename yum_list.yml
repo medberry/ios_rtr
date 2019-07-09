@@ -1,8 +1,8 @@
 ---
 - name: List packages and report
   hosts: all
-  gather_facts: yes
-  become: yes
+  gather_facts: false
+  become: false
 
   tasks:
   - name: Generate RPM list
@@ -12,5 +12,5 @@
 
   - name: Report RPM list
     debug:
-      msg: "{{item.name}}"
+      msg: item.name
     with_items: "{{pkg_list.results}}"
