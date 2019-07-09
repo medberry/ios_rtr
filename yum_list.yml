@@ -8,8 +8,9 @@
   - name: Generate RPM list
     yum:
       list: installed
-    register: pkg_list.results
+    register: pkg_list
 
   - name: Report RPM list
     debug:
-      var: pkg_list
+      msg: "{{ item }}"
+    with_items: pkg_list.results
