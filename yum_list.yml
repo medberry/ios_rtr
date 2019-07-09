@@ -16,3 +16,7 @@
     with_items: "{{pkg_list|json_query(jsonquery)}}"
     vars:
       jsonquery: "results[?name!='ttt'].name"
+
+  - name: Jinja Ninja
+    debug:
+      msg: {% for pkg in pkg_list.results %} pkg.name {% endfor %}
