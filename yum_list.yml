@@ -13,5 +13,5 @@
   - name: Report RPM list
     debug:
       var:  item
-    vars: jsonquery: "results.name"
+    vars: jsonquery: "results[].name"
     with_items: "{{pkg_list|json_query(jsonquery)}}"
