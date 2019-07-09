@@ -8,7 +8,7 @@
   - name: Generate RPM list
     yum:
       list: installed
-    register: pkg_list
+    register: pkg_list.results
 
   - name: Report RPM list
     debug:
